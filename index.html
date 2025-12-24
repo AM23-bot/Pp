@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الاجتماعي</title>
+    <title>إنستغرام خاص بي</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="logo">شبكتي</div>
-        <div class="search-bar"><input type="text" placeholder="بحث..."></div>
-        <div class="user-menu">الملف الشخصي</div>
+        <div class="nav-content">
+            <h2 class="logo">Instagram</h2>
+            <div class="nav-icons">
+                <i class="fa-regular fa-square-plus" onclick="document.getElementById('fileInput').click()"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        <section class="post-creator">
-            <textarea id="postInput" placeholder="بماذا تفكر؟"></textarea>
-            <button onclick="addPost()">نشر</button>
-        </section>
+    <input type="file" id="fileInput" hidden accept="image/*" onchange="previewImage(event)">
+
+    <main class="main-container">
+        <div class="stories-container">
+            <div class="story"><div class="story-img"></div><span>أنت</span></div>
+            <div class="story"><div class="story-img"></div><span>صديق 1</span></div>
+            <div class="story"><div class="story-img"></div><span>صديق 2</span></div>
+        </div>
 
         <div id="feed">
             </div>
